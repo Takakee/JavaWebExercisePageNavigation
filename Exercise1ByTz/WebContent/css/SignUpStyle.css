@@ -1,0 +1,61 @@
+@charset "utf-8";
+body{
+    background-image: url(../images/signUpbackground.jpg);
+    font-size: 20px;
+}
+
+#loginForm{
+    width: 400px;
+    background-color: #fff;
+    margin: 60px auto 0 auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    opacity: 0.8;
+}
+
+.titleSignUp{
+    color: #4D5E9F;
+    font-size: 18px;
+    margin: 10px 35px;
+}
+
+.titleLogin {
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+#loginForm p {
+    text-indent: 110px;
+    margin: 10px 0px;
+}
+
+input{
+    height: 30px;
+    /*input框里的文字缩进*/
+    text-indent: 24px;
+    width: 180px;
+}
+
+.errSpan{
+    font-size: 15px;
+    color: red;
+    display: block;
+    height: 15px;
+    line-height: 15px;
+    text-indent: 120px;
+}
+
+select{
+    height: 30px;
+    padding-left: 24px;
+    padding-right: 15px;
+    width: 190px;
+}
+
+#btSignUp{
+    cursor: pointer;
+    text-indent: 0px;
+    border-radius: 0.7em;
+}

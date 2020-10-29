@@ -1,0 +1,28 @@
+@charset "UTF-8";
+body{
+	margin: 0;
+	padding:0;
+	background-image: linear-gradient(to right, #ff9569 0%, #e92758 100%);
+}
+.h3title{
+	font-weight:bolder;
+}
+.container-small{
+	max-width: 420px;
+}
+.submitBtn{
+	width:35%;
+}
+form{
+	border:1.5px solid #800040;
+	width:300px;  //可以不写了
+	heigth:300px;
+	margin: 75px auto;
+	text-align: center;
+}
+img{
+	margin:30px;
+	cursor:pointer;
+}
+
+

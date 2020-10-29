@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 引入css库 -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/SignInStyle.css" rel="stylesheet">
+<!-- 引入js库 -->
+<script src="js/SignInJS.js"></script>
+</head>
+<body>
+	<form class="container container-small" role="form">
+		<h3 class="h3title">SIGN IN</h3>
+		<div class="form-group">
+			<label>UserName</label>
+			<div class="input-group">
+				<div class="input-group-addon">
+					<kbd class="glyphicon glyphicon-user"></kbd>
+				</div>
+				<input type="text" class="form-control" placeholder="Enter your name..." name="userName" id="userName"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<div class="input-group">
+				<div class="input-group-addon">
+					<kbd class="glyphicon glyphicon-lock"></kbd>
+				</div>
+				<input type="text" class="form-control" placeholder="Enter your password..." name="password" id="password"/>
+			</div>			
+		</div>
+		
+		<!-- src为图片生成的Servlet， -->
+		<div class="form-group form-inline">
+			<img src="controller/CreateImageController" onclick="changeCode()" id="verifyCode" title="看不清，换一个">
+			<!-- 用户输入 -->
+			<input type="text" class="form-control" placeholder="Enter the VCode..." name="VerifyCode" id="userCode"/><br/><br/>
+		</div>
+
+		<!--错误提示-->
+		<span id="checkError"></span>
+
+		<div>
+			<label>
+				<input  type="checkbox" name="setFreeLogin" value="true" id="setFreeLogin" /><b>一周内免登录&nbsp&nbsp Or &nbsp&nbsp</b>
+			</label>
+			<a href="signUp.html">Sign up now!</a>
+		</div>
+		
+		<input type="button" value="提交验证" class="form-control btn btn-primary submitBtn" onclick="ajaxCheckLogin();"><br/><br/>
+		
+	</form>
+
+</body>
+</html>

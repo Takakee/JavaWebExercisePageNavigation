@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>User Sign Up</title>
+	<link href="css/SignUpStyle.css" rel="stylesheet" />
+	<script src="js/jquery-3.5.0.min.js"></script>
+	<script src="js/SignUpJS.js"></script>
+</head>
+<body>
+	<div id="loginForm">
+		<div class="title">
+			<span class="titleSignUp">Sign Up</span>
+            <span class="titleLogin"><a href="#">already have an account? Log in.</a></span>
+		</div>
+
+		<form id="registerForm">
+			<p>
+				<input id="userName" type="text" name="userName" placeholder="Enter userName..." />
+				<span class="errSpan" id="userNameError"></span>
+			</p>
+			<p>
+				<input type="text" id="chrName" name="chrName" placeholder="Enter chrName..."/>
+				<span class="errSpan" id="chrNameError"></span>
+			</p>
+			<p>
+				<input type="text" id="mail" name="mail" placeholder="Enter mail..."/>
+				<span class="errSpan" id="mailError"></span>
+			</p>
+			<p> 
+				<select id="province" name="provinceCode">
+					<option value="">select province</option>
+				</select>
+				<span class="errSpan" id="provinceError"></span>
+			</p>
+			<p> 
+				<select id="city" name="cityCode">
+				<option value="">select city</option>
+				</select>
+				<span class="errSpan" id="cityError"></span>
+			</p>
+			<p>
+				<input id="password" name="password" type="password" placeholder="Enter password..." />
+                <span class="errSpan" id="passwordError"></span>
+            </p>
+            <p>
+				<input id="password1" name="password1" type="password" placeholder="Confirm password..." />
+                <span class="errSpan" id="password1Error"></span>
+			</p>
+			<p>
+                <input id="btLogin" type="button" value="Join&nbsp;&nbsp;Us " />
+                <span class="errSpan" id="checkError"></span>
+            </p>
+		</form>
+	</div>
+</body>
+</html>

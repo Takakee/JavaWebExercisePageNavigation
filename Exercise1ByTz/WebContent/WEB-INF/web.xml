@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Exercise1ByTz</display-name>
+  
+  <servlet>
+  	<servlet-name>CreateImageController</servlet-name>
+  	<servlet-class>controller.CreateImageController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CreateImageController</servlet-name>
+  	<url-pattern>/controller/CreateImageController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>GetDownloadListController</servlet-name>
+  	<servlet-class>controller.GetDownloadListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetDownloadListController</servlet-name>
+  	<url-pattern>/controller/GetDownloadListController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DownloadServlet</servlet-name>
+  	<servlet-class>controller.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DownloadServlet</servlet-name>
+  	<url-pattern>/controller/DownloadServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>LogOutController</servlet-name>
+  	<servlet-class>controller.LogOutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LogOutController</servlet-name>
+  	<url-pattern>/controller/LogOutController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AjaxLoginCheck</servlet-name>
+  	<servlet-class>controller.AjaxLoginCheck</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AjaxLoginCheck</servlet-name>
+  	<url-pattern>/controller/AjaxLoginCheck</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>QueryProvinceCityServlet</servlet-name>
+  	<servlet-class>controller.QueryProvinceCityServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>QueryProvinceCityServlet</servlet-name>
+  	<url-pattern>/controller/QueryProvinceCityServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>CheckUserExistServlet</servlet-name>
+  	<servlet-class>controller.CheckUserExistServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CheckUserExistServlet</servlet-name>
+  	<url-pattern>/controller/CheckUserExistServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>QueryUserServlet</servlet-name>
+  	<servlet-class>controller.QueryUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>QueryUserServlet</servlet-name>
+  	<url-pattern>/controller/QueryUserServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DeleteUserServlet</servlet-name>
+  	<servlet-class>controller.DeleteUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteUserServlet</servlet-name>
+  	<url-pattern>/controller/DeleteUserServlet</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>AutoLoginFilter</filter-name>
+  	<filter-class>controller.AutoLoginFilter</filter-class>
+  	<init-param>
+  		<param-name>notCheckPath</param-name>
+  		<param-value>/Login.html</param-value>
+  	</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>AutoLoginFilter</filter-name>
+  	<url-pattern>/main.jsp</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>PermissionFilter</filter-name>
+  	<filter-class>filter.PermissionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>PermissionFilter</filter-name>
+  	<url-pattern>/personal.jsp</url-pattern>
+  	<url-pattern>/resourceManage.jsp</url-pattern>
+  	<url-pattern>/userManage.jsp</url-pattern>
+  </filter-mapping>
+  
+  <welcome-file-list>
+  	<welcome-file>Login.html</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
